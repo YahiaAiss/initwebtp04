@@ -72,7 +72,7 @@ function calculateResult() {
     
     const reductionPercentage = parseFloat(document.querySelector('input[name="reduction_option"]:checked').value);
     const reductionAmount = netAmount * (reductionPercentage / 100);
-    const grossAmount = netAmount + reductionAmount +TaxAmount ;
+    const grossAmount = netAmount - reductionAmount + TaxAmount ;
     
     const netAmountRow = document.createElement("tr");
     netAmountRow.innerHTML = `<td colspan="4">Net Amount</td><td colspan="2">${netAmount.toFixed(2)} DA</td>`;
